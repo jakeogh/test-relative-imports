@@ -5,7 +5,6 @@
 from __future__ import annotations
 
 import click
-from eprint import eprint
 
 from .cli.gui import gui
 
@@ -15,7 +14,7 @@ from .cli.gui import gui
 def clitest(
     ctx,
 ) -> None:
-    eprint("clitest()")
+    print("clitest()")
 
 
 clitest.add_command(gui, name="gui")
