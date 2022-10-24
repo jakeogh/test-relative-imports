@@ -14,7 +14,7 @@ from .cli.gui import gui
 def clitest(
     ctx,
 ) -> None:
-    print("clitest()")
+    print("__main__.py clitest()")
 
 
 clitest.add_command(gui, name="gui")

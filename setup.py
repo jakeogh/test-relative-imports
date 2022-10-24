@@ -27,7 +27,7 @@ config = {
     "install_requires": dependencies,
     "entry_points": {
         "console_scripts": [
-            "test-relative-imports=test_relative_imports.test_relative_imports:clitest",
+            "test-relative-imports=test_relative_imports.__main__:clitest",
         ],
     },
 }
