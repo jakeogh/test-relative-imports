@@ -35,3 +35,26 @@ gui()
 
 ```
 
+### Why:
+```
+$ scalene /usr/bin/test-relative-imports
+Usage: python -m scalene.test-relative-imports [OPTIONS] COMMAND [ARGS]...
+
+Options:
+  --help  Show this message and exit.
+
+Commands:
+  gui
+Scalene: An exception of type FileNotFoundError occurred. Arguments:
+(2, 'No such file or directory')
+Traceback (most recent call last):
+  File "/home/user/.local/lib/python3.10/site-packages/scalene/scalene_profiler.py", line 1885, in run_profiler
+    exit_status = profiler.profile_code(
+  File "/home/user/.local/lib/python3.10/site-packages/scalene/scalene_profiler.py", line 1652, in profile_code
+    did_output = Scalene.output_profile()
+  File "/home/user/.local/lib/python3.10/site-packages/scalene/scalene_profiler.py", line 789, in output_profile
+    json_output = Scalene.__json.output_profiles(
+  File "/home/user/.local/lib/python3.10/site-packages/scalene/scalene_json.py", line 333, in output_profiles
+    with open(full_fname, "r", encoding="utf-8") as source_file:
+FileNotFoundError: [Errno 2] No such file or directory: '/home/cfg/_myapps/test-relative-imports/<frozen importlib._bootstrap_external>'
+```
