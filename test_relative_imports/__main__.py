@@ -18,3 +18,8 @@ def clitest(
 
 
 clitest.add_command(gui, name="gui")
+
+
+if __name__ == "__main__":
+    # pylint: disable=E1120
+    clitest()
